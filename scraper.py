@@ -111,11 +111,6 @@ def scraper(url, resp):
         print(f"Error processing {url}: {e}")
         return []
 
-def is_likely_file(url):
-    path = urlparse(url).path
-    last_segment = path.rstrip('/').split('/')[-1]
-    return '.' in last_segment
-
 def extract_next_links(url, resp, soup):
     # Implementation required.
     # url: the URL that was used to get the page
